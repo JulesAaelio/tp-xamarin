@@ -6,7 +6,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Tout les articles" 
-           HorizontalOptions="Center"/>
+           StyleClass="view-title"
+                   />
             <ListView x:Name="MyListview" ItemsSource="{Binding Articles}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
