@@ -11,7 +11,7 @@ namespace TpXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ListPage.ListPage();
         }
 
         protected override void OnStart()
