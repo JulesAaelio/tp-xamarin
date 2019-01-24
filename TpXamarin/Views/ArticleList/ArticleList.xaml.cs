@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TpXamarin.ListPage
+namespace TpXamarin.Views.ArticleList
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListPage : ContentPage
+	public partial class ArticleList : ContentPage
 	{
-		public ListPage ()
+		public ArticleList ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
             this.BindingContext = new ArticleListViewModel();
 		}
     }

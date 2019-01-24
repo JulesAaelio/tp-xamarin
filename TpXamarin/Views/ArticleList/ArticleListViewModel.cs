@@ -1,33 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using TpXamarin.Models;
 using System.Net.Http;
-using Newtonsoft.Json;
-using System.ComponentModel;
 using TpXamarin.JLTApi;
 using Refit;
 
-namespace TpXamarin.ListPage
+namespace TpXamarin.Views.ArticleList
 {
-    class ArticleListViewModel : INotifyPropertyChanged
+    class ArticleListViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-
-        private List<Article> articles;
+        private List<Article> _articles;
         public List<Article> Articles
         {
             get
             {
-                return articles;
+                return _articles;
             }
             set
             {
-                this.articles = value;
+                this._articles = value;
                 OnPropertyChanged("Articles");
             }
         }

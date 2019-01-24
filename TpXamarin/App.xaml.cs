@@ -1,4 +1,5 @@
 ﻿using System;
+using TpXamarin.Views.ArticleList;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace TpXamarin
         {
             InitializeComponent();
 
-            MainPage = new ListPage.ListPage();
+            MainPage = new ArticleList();
         }
 
         protected override void OnStart()
