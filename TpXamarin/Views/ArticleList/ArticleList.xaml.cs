@@ -17,5 +17,7 @@ namespace TpXamarin.Views.ArticleList
 			InitializeComponent();
             this.BindingContext = new ArticleListViewModel();
 		}
-    }
+
+		
+	}
 }

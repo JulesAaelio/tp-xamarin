@@ -12,7 +12,7 @@ namespace TpXamarin
         {
             InitializeComponent();
 
-            MainPage = new ArticleList();
+            MainPage = new NavigationPage(new ArticleList());
         }
 
         protected override void OnStart()

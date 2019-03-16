@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:TpXamarin.Behavior;assembly=TpXamarin"
+             xmlns:converter="clr-namespace:TpXamarin.Converter;assembly=TpXamarin"
              x:Class="TpXamarin.Views.ArticleList.ArticleList">
 
+    <ContentPage.Resources>
+        <converter:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Tout les articles" 
            StyleClass="view-title"
                    />
             <ListView x:Name="MyListview" ItemsSource="{Binding Articles}">
+                <ListView.Behaviors>  
+                    <behavior:EventToCommandBehavior             
+                        EventName="ItemTapped"  
+                        Command="{Binding SelectItemCommand}"  
+                        Converter="{StaticResource ItemTappedEventArgsConverter}"/>
+                </ListView.Behaviors>  
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
