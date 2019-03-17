@@ -3,16 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:behavior="clr-namespace:TpXamarin.Behavior;assembly=TpXamarin"
              xmlns:converter="clr-namespace:TpXamarin.Converter;assembly=TpXamarin"
-             x:Class="TpXamarin.Views.ArticleList.ArticleListView">
+             x:Class="TpXamarin.Views.ArticleList.ArticleListView" Title="Tout les articles">
 
     <ContentPage.Resources>
         <converter:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Tout les articles" 
-           StyleClass="view-title"
-                   />
             <ListView x:Name="MyListview" ItemsSource="{Binding Articles}">
                 <ListView.Behaviors>  
                     <behavior:EventToCommandBehavior             

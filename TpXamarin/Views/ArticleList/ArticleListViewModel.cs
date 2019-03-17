@@ -26,10 +26,8 @@ namespace TpXamarin.Views.ArticleList
                 OnPropertyChanged("Articles");
             }
         }
+
         
-        private String url = "http://api.blog.juleslaurent.fr/articles";
-        public HttpClient httpClient = new HttpClient();
-      
         public ArticleListViewModel()
         {
             this.Load();
@@ -42,8 +40,8 @@ namespace TpXamarin.Views.ArticleList
 
         public ICommand SelectItemCommand => new Command<Article>((Article article) =>
             {
-                Console.WriteLine("OK");
-                this.NavigationService.NavigateToAsync<ArticleDetailViewModel>();
+                Console.WriteLine("Received order");
+                this.NavigationService.NavigateToAsync<ArticleDetailViewModel>(article);
             });
     }
 }

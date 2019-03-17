@@ -15,6 +15,7 @@ namespace TpXamarin.Views.ArticleDetail
         public ArticleDetailView()
         {
             InitializeComponent();
+            this.BindingContext = new ArticleDetailViewModel();
         }
     }
 }

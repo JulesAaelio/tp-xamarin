@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace TpXamarin.Models
 {
-    class Article
+    public class Article
     {
 
         [JsonProperty("id")]

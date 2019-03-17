@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TpXamarin.Services;
 using TpXamarin.Views.ArticleList;
+using TpXamarin.Views.SplashScreen;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +16,11 @@ namespace TpXamarin
             InitializeComponent();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
-            new NavigationService().InitializeAsync();
+            MainPage = new SplashScreenView();
+            await Task.Delay(2000);
+            await new NavigationService().InitializeAsync();
             // Handle when your app starts
         }
 

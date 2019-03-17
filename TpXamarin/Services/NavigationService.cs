@@ -77,6 +77,8 @@ namespace TpXamarin.Services
             if (page is ArticleListView)
             {
                 Application.Current.MainPage = new CustomNavigationView(page);
+                
+                
             }
             else
             {
