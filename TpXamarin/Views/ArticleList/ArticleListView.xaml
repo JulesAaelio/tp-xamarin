@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:TpXamarin.Behavior;assembly=TpXamarin"
+             xmlns:converter="clr-namespace:TpXamarin.Converter;assembly=TpXamarin"
+             x:Class="TpXamarin.Views.ArticleList.ArticleListView" Title="Tout les articles">
+
+    <ContentPage.Resources>
+        <converter:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
+        <converter:ResourceUrlConverter x:Key="ResourceUrlConverter" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Articles}" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+                <ListView.Behaviors>  
+                    <behavior:EventToCommandBehavior             
+                        EventName="ItemTapped"  
+                        Command="{Binding SelectItemCommand}"  
+                        Converter="{StaticResource ItemTappedEventArgsConverter}"/>
+                </ListView.Behaviors>  
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Style="{StaticResource ArticleFrame}">
+                                <StackLayout VerticalOptions="FillAndExpand" >
+                                        <Image Source="{Binding IllustrationAddress, Converter={StaticResource ResourceUrlConverter}}"></Image>
+                                        <Label Text="{Binding Title}" FontSize="Large"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

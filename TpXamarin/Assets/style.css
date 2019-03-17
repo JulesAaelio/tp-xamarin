@@ -1,0 +1,12 @@
+﻿.view-title {
+	text-align:center;
+	font-size: 30;
+}
+
+^navigationpage {
+	-xf-bar-background-color: #333333;
+}
+
+#SplashScreen {
+	background-color: #333333;
+}
