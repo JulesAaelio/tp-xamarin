@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TpXamarin.Views.ArticleDetail
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ArticleDetail : ContentPage
+    public partial class ArticleDetailView : ContentPage
     {
-        public ArticleDetail()
+        public ArticleDetailView()
         {
             InitializeComponent();
         }

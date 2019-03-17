@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using TpXamarin.JLTApi;
 using Refit;
+using TpXamarin.Views.ArticleDetail;
 using Xamarin.Forms;
 
 namespace TpXamarin.Views.ArticleList
@@ -40,8 +41,9 @@ namespace TpXamarin.Views.ArticleList
         }
 
         public ICommand SelectItemCommand => new Command<Article>((Article article) =>
-        {
-            Console.WriteLine("Tapped");
-        });
+            {
+                Console.WriteLine("OK");
+                this.NavigationService.NavigateToAsync<ArticleDetailViewModel>();
+            });
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TpXamarin.Views.ArticleList
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ArticleList : ContentPage
+	public partial class ArticleListView : ContentPage
 	{
-		public ArticleList ()
+		public ArticleListView ()
 		{
 			InitializeComponent();
             this.BindingContext = new ArticleListViewModel();

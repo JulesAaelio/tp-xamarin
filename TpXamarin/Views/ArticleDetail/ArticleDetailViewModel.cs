@@ -1,6 +1,6 @@
 namespace TpXamarin.Views.ArticleDetail
 {
-    public class ArticleDetailViewModel
+    public class ArticleDetailViewModel: BaseViewModel
     {
         
     }

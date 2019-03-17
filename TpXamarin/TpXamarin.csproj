@@ -16,19 +16,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\ArticleList\ArticleList.xaml.cs">
-      <DependentUpon>ArticleList.xaml</DependentUpon>
+    <Compile Update="Views\ArticleList\ArticleListView.xaml.cs">
+      <DependentUpon>ArticleListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ArticleDetail\ArticleDetailView.xaml.cs">
+      <DependentUpon>ArticleDetailView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\ArticleList\ArticleList.xaml">
+    <EmbeddedResource Update="Views\ArticleList\ArticleListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <Page Include="Views\ArticleDetail\ArticleDetail.xaml">
+    <Page Include="Views\ArticleDetail\ArticleDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Page>
+    <Page Include="Views\CustomNavigation\CustomNavigation.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Page>

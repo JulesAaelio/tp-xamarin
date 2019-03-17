@@ -1,4 +1,5 @@
 ﻿using System;
+using TpXamarin.Services;
 using TpXamarin.Views.ArticleList;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,12 +12,11 @@ namespace TpXamarin
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new ArticleList());
         }
 
         protected override void OnStart()
         {
+            new NavigationService().InitializeAsync();
             // Handle when your app starts
         }
 
